@@ -13,8 +13,13 @@ class Command < Thor
   end
 
   desc 'to_timestamp', 'date convert_to timestamp'
-  def to_timestamp(date)
-    puts JJ.new.totimestamp(date)
+  def to_timestamp(date, time='00:00:00')
+    puts JJ.new.totimestamp(
+      {
+        date: date,
+        time: time,
+      }
+    )
   end
 
 end

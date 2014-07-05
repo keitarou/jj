@@ -4,8 +4,11 @@ require "time"
 
 class JJActionTotimestamp
 
-  def execute(date)
-    Time.parse(date).to_i.to_s
+  def execute(param)
+    date = param[:date]
+    time = param[:time]
+
+    Time.parse("#{date} #{time}").to_i.to_s
   end
 
 end

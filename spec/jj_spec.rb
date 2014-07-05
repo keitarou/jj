@@ -14,7 +14,20 @@ describe "JJActionToDate" do
 end
 
 describe "JJActionToTimestamp" do
-  it "return timestamp string" do
-    JJ.new.totimestamp("2014-07-06 00:00:00").should  == '1404572400'
+  it "set time. return timestamp string" do
+    JJ.new.totimestamp(
+      {
+        date: '2014-07-06',
+        time: '00:00:00'
+      }
+    ).should  == '1404572400'
+  end
+
+  it "not set time. return timestamp string" do
+    JJ.new.totimestamp(
+      {
+        date: '2014-07-06',
+      }
+    ).should  == '1404572400'
   end
 end
