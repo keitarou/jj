@@ -7,11 +7,9 @@ require 'jj'
 class Command < Thor
   default_command :to_timestamp
 
-  desc 'to_date', '2014-01-01 00:00:00 to_date'
-  option :date, :type => :string, :aliases => :'-t', :desc => "timestamp"
-  def to_date
-    JJ.new.sample
-    # JJ.new.todate(params[:date])
+  desc 'to_date', 'timestamp convert_to date'
+  def to_date(timestamp)
+    puts JJ.new.todate(timestamp)
   end
 
 end

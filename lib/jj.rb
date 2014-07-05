@@ -5,7 +5,7 @@ require_relative "./jj/action/to_date"
 class JJ
 
   def method_missing(name, *args)
-    Object.const_get("JJAction#{name.capitalize}").new.execute *args
+    Object.const_get("JJAction#{name.capitalize}").new.execute args.first
   end
 
 end

@@ -1,7 +1,7 @@
 # coding: utf-8
 class JJActionSample
 
-  def execute
+  def execute(args)
     'hoge'
   end
 
