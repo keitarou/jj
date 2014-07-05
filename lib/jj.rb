@@ -1,6 +1,7 @@
 # coding: utf-8
 require_relative "./jj/action/sample"
 require_relative "./jj/action/to_date"
+require_relative "./jj/action/to_timestamp"
 
 class JJ
 
